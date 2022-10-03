@@ -30,8 +30,9 @@ function onDocumentLoad() {
 
 	let path, localizedPath;
 	const pathname = window.location.pathname;
-	const section = /\/(manual|api|examples)\//.exec( pathname )[ 1 ].toString().split( '.html' )[ 0 ];
-	let name = /[\-A-Za-z0-9]+\.html/.exec( pathname ).toString().split( '.html' )[ 0 ];
+	const section = /\/(manual|api|examples)\//.exec(pathname)[1].toString().split('.html')[0];
+	// let name = /[\-A-Za-z0-9]+\.html/.exec( pathname ).toString().split( '.html' )[ 0 ];
+	let name = pathname.split('/')[pathname.split('/').length - 1];
 
 	switch ( section ) {
 
